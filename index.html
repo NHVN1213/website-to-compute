@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
+  <meta charset="UTF-8" />
+  <title>You have been HACKED!</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      margin-top: 100px;
+      animation: flashBg 0.5s infinite;
+    }
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="https://glitch.com/favicon.ico" />
+    h1 {
+      font-size: 60px;
+      animation: shake 0.2s infinite, flashText 0.5s infinite;
+    }
 
-  <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-  <title>Hello World!</title>
+    p {
+      font-size: 30px;
+      margin-top: 50px;
+      animation: flashText 1s infinite;
+    }
 
-  <!-- The website stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
+    @keyframes flashBg {
+      0%   { background-color: black; }
+      50%  { background-color: darkred; }
+      100% { background-color: black; }
+    }
 
-  <!-- The website JavaScript file -->
-  <script src="/script.js" defer></script>
+    @keyframes flashText {
+      0%, 100% { color: red; }
+      50%      { color: white; }
+    }
+
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+  </style>
 </head>
-
 <body>
-  <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
-  <div class="wrapper">
-    <div class="content" role="main">
-      <h1 class="title">Oh hi website!</h1>
-      <img src="/cool-website.svg" class="illustration" alt="cool website" />
-      <div class="instructions">
-        <p>
-          Fork <a href="https://github.com/glitchdotcom/website-to-compute">this project</a> and open it in a GitHub Codespace.
-        </p>
-        <p> Follow the steps in the README to deploy your new website to Fastly in a few steps!
-        </p>
-
-      </div>
-
-      <footer class="footer">
-        <div>
-          <a class="remix" href="https://github.com/glitchdotcom/website-to-compute">🚧 Get your own site</a>
-        </div>
-      </footer>
-    </div>
-  </div>
+  <h1>YOU HAVE BEEN HACKED!</h1>
+  <p>Your files are being stolen...</p>
 </body>
-
 </html>
